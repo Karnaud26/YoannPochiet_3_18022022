@@ -48,6 +48,10 @@ a.animation-D8 {
   animation-delay: 0.8s;
 }
 
+a.animation-D9 {
+  animation-delay: 0.9s;
+}
+
 /*-----VARIABLES-----*/
 /* Accueil */
 body {
@@ -83,6 +87,51 @@ header {
   justify-content: center;
   align-items: center;
   margin: 0;
+}
+
+/* Loader */
+.loader_container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  animation: fondu 0s ease 1.5s 1;
+  animation-fill-mode: both;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Shrikhand";
+  padding: 2rem;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  border: 5px transparent solid;
+  position: relative;
+  z-index: 10;
+}
+.loader::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  bottom: -5px;
+  right: -5px;
+  border: solid transparent 3px;
+  border-top-color: #FF79DA;
+  border-bottom-color: #FF79DA;
+  border-radius: 100px;
+  animation: spin 1s ease 0s 3;
+  animation-fill-mode: both;
 }
 
 /* LOCALISATION */
@@ -409,6 +458,21 @@ header {
   font-size: 25px;
 }
 
+/* ANIMATIONS */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fondu {
+  to {
+    opacity: 0;
+    z-index: -10;
+  }
+}
 /* FOOTER */
 footer {
   font-family: "roboto";
@@ -614,29 +678,36 @@ footer .balise-footer ul li a i {
 }
 .balise-contener-menu .balise-plats .liste-plats-groupe .plats {
   cursor: pointer;
-  transform: scale(0);
-  animation: pop 0.6s;
-  animation-fill-mode: both;
   width: 100%;
   height: 70px;
-  border-radius: 15px;
-  background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   margin: 10px 0 10px 0;
-  overflow: hidden;
 }
 .balise-contener-menu .balise-plats .liste-plats-groupe .plats .bnt-plats {
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+  transform: scale(0);
+  animation: pop 0.6s;
+  animation-fill-mode: both;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   text-decoration: none;
   border-radius: 15px;
   padding: 0;
   margin: 0;
   overflow: hidden;
+}
+.balise-contener-menu .balise-plats .liste-plats-groupe .plats .bnt-plats:hover .check {
+  margin-right: 0;
+}
+.balise-contener-menu .balise-plats .liste-plats-groupe .plats .bnt-plats:hover .check i {
+  transform: rotate(-360deg);
+  transition-duration: 0.5s;
 }
 .balise-contener-menu .balise-plats .liste-plats-groupe .plats .bnt-plats .plat-ingrediant {
   flex: 1;
