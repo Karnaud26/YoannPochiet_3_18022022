@@ -8,6 +8,27 @@ $tertiare:#99E2D0;
 
 /* Accueil */
 
+/* Pages Restaurants */
+
+.header-pages-restaurants{
+    @include header-pages-restaurants;
+}
+
+.balise-images-pages{
+    @include balise-images-pages
+}
+
+.balise-section-contener
+{
+    @include balise-section-contener
+}
+
+/* Listes */ 
+
+.balise-contener-menu{
+    @include balise-contener-menu
+}
+
 body{
     @include html;
 }
@@ -405,25 +426,4 @@ header{
 footer
 {
     @include footer;
-}
-
-/* Pages Restaurants */
-
-.header-pages-restaurants{
-    @include header-pages-restaurants;
-}
-
-.balise-images-pages{
-    @include balise-images-pages
-}
-
-.balise-section-contener
-{
-    @include balise-section-contener
-}
-
-/* Listes */
-
-.balise-contener-menu{
-    @include balise-contener-menu
 }

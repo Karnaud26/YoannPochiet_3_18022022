@@ -247,7 +247,7 @@
 
 @for $i from 0 through 9{
     a.animation-D#{$i} {
-        animation-delay:$i*0.1s;
+        animation-delay:$i*0.1s !important;
     }
 }
 
