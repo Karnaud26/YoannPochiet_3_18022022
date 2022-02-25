@@ -1,4 +1,4 @@
-#!/bin/sh
+sass --watch ./sass/style.scss:./css/prefixed/style.css#!/bin/sh
 
 # This script drives the standalone dart-sass package, which bundles together a
 # Dart executable and a snapshot of dart-sass.

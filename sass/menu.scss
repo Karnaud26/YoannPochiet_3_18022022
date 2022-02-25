@@ -33,7 +33,7 @@
 
 @mixin balise-section-contener
 {
-    padding: 0 20px 0 20px;
+    padding: 0;
     background-color: #f4f4f4;
     height: auto;
     margin: auto;
@@ -71,14 +71,21 @@
                 font-size: 28px;
             }
             .coeur{
-                width: 10%;
+                transition:0.5s;
+            } 
+            .coeur i{
                 @include coeur;
-                padding-right: 10px;
-                
-                i{
-                    font-size: 30px;
-                }
+                margin-right: 2rem;
+                transition:transform 0.5s ease-out 1s;
+        
             }
+            .coeur i:hover{
+                font-weight: 600;
+            }
+            .coeur:hover{
+                @include coeur_hover;
+            }
+    
         }
 
     }

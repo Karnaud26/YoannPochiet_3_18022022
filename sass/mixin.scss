@@ -122,7 +122,22 @@
 
 /* LIKE */
 
-@mixin coeur
+
+@mixin coeur{
+    color: #000;
+    font-size: 25px;
+    margin-right:2px;
+    cursor:pointer;
+}
+
+@mixin coeur_hover{
+    background: linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+/*@mixin coeur
                     {
                         display: flex;
                         flex-direction: row;
@@ -132,15 +147,17 @@
                         i{
                             color: black;
                             margin-right: 2px;
+                            transition-duration: 0.5s;
                             cursor: pointer;
                             &:hover{
                                 font-weight: 600;
-                                transition-duration: 0.5s;
                                 background: linear-gradient(#9356DC, #FF79DA);
                                 background-clip: border-box;
                                 -webkit-background-clip: text;
                                 -webkit-text-fill-color: transparent;
+                                cursor: pointer;
                             }
                         
                         }
                     }
+fin code*/
