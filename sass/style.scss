@@ -391,7 +391,7 @@ header{
                     .coeur{
                         font-size: 25px;
                         margin-right: 10px;
-                        transition:0.5s;
+                        /*transition:0.5s;*/
                     }
                     .coeur:hover i{
                         font-weight: 600;
@@ -405,7 +405,7 @@ header{
                     .coeur:hover::before{
                         cursor: pointer;
                         @include coeur_hover;
-                        transition:transform 0.5s ease-out;
+                        /*transition:transform 0.5s ease-out;*/
                     }
                 }
             }
