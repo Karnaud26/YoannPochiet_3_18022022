@@ -135,6 +135,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor: pointer;
+    transition: transform 0.1ms ease-out 0.5s;
 }
 
 /*@mixin coeur
